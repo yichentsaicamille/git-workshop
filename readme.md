@@ -230,3 +230,120 @@ https://gist.github.com/billy3321/1001749662c370887c63bb30f26c9e6e
 這堂課也學會了用指令對電腦下各種動作，還有操作 github，感覺很有工程師的樣子 XD 努力記起來各種指令，融會貫通後說不定上班打指令會被說很屌哈哈哈。
 
 # 12/26 Node.js 上課筆記 & 心得
+
+```
+先以現階段的課程內容學精為主，工作一段時間後會遇到各種狀況，都需要其他學科的知識，所以未來遇到問題，要花時間去查緣由
+、趁機補充相關知識，以下是會用到的相關學科:
+
+1. 資料結構 Data Structure (DS)
+2. 演算法 Algorithm (Algo)
+3. 資料庫 Database (DB)
+  正規化 <-- 怎麼設計 table schema
+  （這不是一定非得要遵守的法律，但是我們會盡量遵守，的確有時候會因為一些商業邏輯特殊的設定，會違反正規化）
+4. 網路 Networking
+5. 作業系統 Operating System (OS)
+```
+
+## Node.js
+
+什麼是 Node.js?
+
+- 不是框架
+- 後端在用的？
+- 不是程式語言
+
+到目前為止，你們寫的 Javascript 都在哪裡「執行」？ 瀏覽器
+
+—> NodeJS 另外一個可以執行 Javascript 的地方
+
+### 產品版本開發生命週期
+
+- Current: 最新的 NodeJS 版本
+- Active: 正在積極維護和升級的版本
+- Maintenance: 維護中的 LTS，直到生命週期結束
+- LTS: Long-Term Support 長期維護版
+- EOL: end of life，生命週期結束、不再維護
+
+### 使用 nvm 執行 Node.js
+
+1. 安裝 nvm
+2. 檢視版本號 (需用系統管理員開啟 git bash)
+3. 安裝最新版本
+4. 切換要使用的 node 版本
+5. 確認目前安裝的版本
+
+### nvm 指令
+
+```bash
+# 查詢 nvm 指令
+nvm ??
+
+# 列出可以安裝的版本
+nvm ls-remote 16
+# windows版本
+nvm list available
+
+# 安裝最新版本號
+nvm install 16.13.1
+
+# 切換要使用的 node 版本
+nvm use 16.13.1
+
+# 確認目前執行的版本
+node -v
+
+# 列出你目前主機安裝的版本
+nvm ls
+# windows版本
+nvm list
+
+# 設定預設的版本
+nvm alias default 16.13.1
+```
+
+\*\*\*練習  
+建立好 repo 資料夾後 clone 下來再建立 basic 資料夾，建立 hello.js 檔案後，到 bash cd 到 js 同層級，執行 hello.js 檔案
+
+```bash=
+node hello
+```
+
+## NodeJS 是？
+
+- NodeJS 是不是一個程式語言？ No
+- NodeJS 是不是一個框架？ No
+- NodeJS 可以讓我們脫離瀏覽器執行 JS 的環境 ==> 讓你可以在伺服器端執行程式
+- NodeJS 是以 Chrome 的 V8 引擎為核心
+  https://github.com/nodejs/node/tree/master/deps/v8
+
+JS 的執行環境
+
+- 瀏覽器
+- NodeJS
+
+![](https://i.imgur.com/JcXqMC2.png)
+
+==> document, window,... 這些都是屬於瀏覽器提供的物件，所以這些物件不可以在 nodejs 裡面用
+
+## NodeJS 的特色 (JS)
+
+- 單執行緒
+- 非阻塞
+- 非同步 IO
+- 事件循環 (event loop)
+
+### 單執行緒 single-thread
+
+thread --> 作業系統
+
+- Process vs Thread (multi-thread)
+- 排程演算法, FIFO, SJF
+- Thread pool
+- Deadlock
+- Context Switching
+- Race Condition \*\*
+
+## 心得
+
+今天後半段講解作業系統的部分有點飄走(先跟老師跪...)，後面會補上課錄影檔><
+上午在安裝 nvm 的時候卡住很久，後來搞定成就感滿滿(不過只是用系統管理員身分下指令就 ok 啦)
