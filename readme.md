@@ -58,6 +58,8 @@ cat ~/.gitconfig
 $ git init
 ```
 
+![](https://i.imgur.com/iYbhwu4.png)
+
 ### 任務四 : git 新增、修改、刪除檔案
 
 ```bash
@@ -153,6 +155,8 @@ git push -u origin feat-login
 
 ##### SCRUM
 
+![](https://i.imgur.com/1IHb1J1.png)
+
 - sprint
 
   1. 通常是 2 - 4 週
@@ -203,6 +207,8 @@ markdown 語法參考:
 https://gist.github.com/billy3321/1001749662c370887c63bb30f26c9e6e
 
 ### 任務九 : 了解 git flow
+
+![](https://i.imgur.com/rV7GdFn.png)
 
 #### pull requests
 
