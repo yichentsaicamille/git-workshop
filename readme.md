@@ -343,11 +343,11 @@ JS 的執行環境
 thread --> 作業系統
 
 - Process vs Thread (multi-thread)
-- 排程演算法, FIFO, SJF
-- Thread pool
-- Deadlock
-- Context Switching
-- Race Condition \*\*
+- 排程演算法, FIFO(先到先執行), SJF(時間短的先執行)
+- Thread pool: 在 process 建立之初，預先建立多條 threads 置於 thread pool 中，當需要使用時，就從 thread pool 中取出使用，用完再還給 thread pool。-->先徵 5 個工程師，專案邊做邊找
+- Deadlock: procss 滿載，一直等待中。
+- Context Switching: process 一直切換，腦袋會 lag
+- Race Condition: producer/consumer 在 share memory 溝通方式下，共享變數的值會因為 processes 執行的順序不同而有所不同。 \*\*
 
 ## 心得
 
